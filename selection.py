@@ -19,6 +19,17 @@ def selection_sort(a):
         if index != i:
             a[index], a[i] = a[i], a[index]
 
+def insertion_sort (a):
+    for k in range(1,len(a)):
+        current = a[k]
+        j = k
+
+        while j > 0 and a[j-1] > current:
+            a[j] = a[j-1]
+            j -= 1
+
+        a[j] = current
+
 
 def worst_case(n):
     r = range(n)
@@ -43,11 +54,12 @@ def performance(sort, scenario):
     print("Done.")
 
 if __name__ == '__main__':
+    """
     array = [56,2,5,12,6]
     m = find_max(array,0,len(array))
     print('O maior está na posição: {}'.format(m))
 
     selection_sort(array)
-    print(array)
+    print(array)"""
 
     performance(selection_sort, worst_case)    

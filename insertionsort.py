@@ -3,12 +3,11 @@ def insertion_sort (a, compare):
         current = a[k]
         j = k
 
-        while j > 0 and compare(a[j-1], current) > 0:
+        while j > 0 and a[j-1] > current:
             a[j] = a[j-1]
-            j = j - 1
+            j -= 1
 
         a[j] = current
-        print(k, a)
 
 def compare_int(a, b):
     return a-b
