@@ -8,6 +8,7 @@ def insertion_sort (a, compare):
             j -= 1
 
         a[j] = current
+        print(a)
 
 def compare_int(a, b):
     return a-b
@@ -21,8 +22,5 @@ class Veiculo(object):
         self.potencia = potencia
 
 if __name__ == '__main__' :
-    a = [2,4,13,1,5,8,2]
+    a = [25,1,4,3,3,12,2]
     insertion_sort(a, compare_int)
-
-    v1 = Veiculo("A3", 140.0)
-    print(v1.potencia)
